@@ -108,3 +108,6 @@ body[data-type="games"] #page {
 body[data-type="games"] #page .page-title {
   display: none;
 }
+.games-item .games-item-content .games-item-content-item .games-item-content-item-cover a {
+  height: 100%;
+}
