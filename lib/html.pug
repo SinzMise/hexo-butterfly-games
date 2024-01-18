@@ -1,0 +1,34 @@
+#games
+      .author-content.author-content-item.GamesPage.single(style = `background: url(${top_background}) left 37% / cover no-repeat !important;`)
+        .card-content
+          .author-content-item-tips=name
+          span.author-content-item-title=description
+          .content-bottom
+            .tips=tips
+          .banner-button-group
+            a.banner-button.no-text-decoration(href=buttonLink)
+              i.anzhiyufont.anzhiyu-icon-arrow-circle-right(style='font-size: 1.3rem')
+              span.banner-button-text=buttonText
+      each item in good_games
+        .goodgames-item
+          h2.goodgames-title= item.title
+          .goodgames-item-description= item.description
+          .games-item
+            .games-item-content
+              each iten, indey in item.games_list
+                .games-item-content-item
+                  .games-item-content-item-cover
+                    img.games-item-content-item-image(data-lazy-src=iten.image onerror=`this.onerror=null;this.src='` + errorimg + `'` alt=iten.name)
+                  .games-item-content-item-info
+                    .games-item-content-item-name(onclick=`rm.rightmenuCopyText("${iten.name}");anzhiyu.snackbarShow("已经复制游戏名" 【" + iten.name + "】"}");` title=iten.name)= iten.name
+                    .games-item-content-item-specification= iten.specification
+                    .games-item-content-item-description= iten.description
+                    .games-item-content-item-toolbar
+                      if iten.link.includes('https://') || iten.link.includes('http://')
+                        a.games-item-content-item-link(href= iten.link, target='_blank') 详情
+                        .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification + " " + iten.description}'` + ")")
+                          i.anzhiyufont.anzhiyu-icon-message
+                      else
+                        a.games-item-content-item-link(href= iten.link, target='_blank') 查看文章
+                        .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification + " " + iten.description}'` + ")")
+                          i.anzhiyufont.anzhiyu-icon-message
