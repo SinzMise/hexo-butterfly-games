@@ -72,4 +72,4 @@
   | path                                | comments   | 【可选】games 的路径名称。默认为 games，生成的页面为 games/index.html |
   | front_matter                        | object     | 【可选】games 页面的 front_matter 配置,写法见上文示例             |
 # 截图
-![](https://unpkg.zhimg.com/hexo-butterfly-envelope/lib/violet.jpg)
+![](https://cdn.jsdelivr.net/gh/SinzMise/picx-images-hosting@master/20240118/msedge_3ga8r6QcmR.3doduw5wpd60.png)

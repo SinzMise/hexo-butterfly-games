@@ -1,6 +1,6 @@
 {
   "name": "hexo-butterfly-games",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A games pages plugin for theme-butterfly",
   "main": "index.js",
   "scripts": {
